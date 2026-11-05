@@ -3,132 +3,391 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuen | Interdimensional Portfolio</title>
+  <meta name="description" content="Yuen's interdimensional portfolio — product design, front-end craft, and the occasional portal-powered idea." />
 
-  <!-- TODO: Change the title and description to your own -->
-  <title>Your Name | Portfolio</title>
-  <meta name="description" content="Personal portfolio of Your Name — student, builder, problem solver." />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="cursor-dot" aria-hidden="true"></div>
 
-  <!-- ============ NAVIGATION ============ -->
   <header class="site-header">
     <nav class="nav container">
-      <a href="#" class="nav-logo">YN</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <a href="#top" class="nav-logo" aria-label="Yuen home">
+        <span class="nav-mark">Y</span>
+        <span class="nav-name">Yuen</span>
+      </a>
+
+      <div class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour theme">🛸</button>
+        <a href="#contact" class="btn btn-primary btn-small">Wubba Lubba</a>
+      </div>
     </nav>
   </header>
 
-  <main>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-content container" data-reveal>
+        <p class="eyebrow">Rick's multiverse · Morty's chaos · Republic Poly</p>
+        <h1>Hi, I’m Yuen — building weirdly smooth experiences across dimensions.</h1>
+        <p class="hero-subtitle">
+          I’m a Singapore-based creator from Republic Polytechnic, blending product design, front-end craft, and a little interdimensional chaos to build digital experiences that feel smart, clear, and alive.
+        </p>
 
-    <!-- ============ HERO ============ -->
-    <section class="hero container">
-      <p class="hero-greeting">Hi, I'm</p>
-      <!-- TODO: Put your name here -->
-      <h1 class="hero-name">Your Name</h1>
-      <!-- TODO: One line about who you are -->
-      <p class="hero-tagline">Student developer who likes building things on the web.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">See my work</a>
-        <a href="#contact" class="btn btn-outline">Get in touch</a>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View portal projects</a>
+          <a href="#about" class="btn btn-secondary">About my mission</a>
+        </div>
+
+        <ul class="hero-stats" aria-label="Key statistics">
+          <li><strong>6+</strong><span>Years building</span></li>
+          <li><strong>18</strong><span>Portal launches</span></li>
+          <li><strong>4</strong><span>Dimension wins</span></li>
+        </ul>
       </div>
+      <div class="scroll-indicator" aria-hidden="true"></div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
     <section id="about" class="section container">
-      <h2 class="section-title">About Me</h2>
       <div class="about-grid">
-        <!-- TODO: Replace with your own photo in assets/images/ -->
-        <img src="assets/images/profile-placeholder.svg" alt="Photo of Your Name" class="about-photo" />
-        <div>
-          <!-- TODO: Write 2–3 short paragraphs about yourself -->
+        <div class="about-photo-panel" data-reveal>
+          <div class="photo-frame portal-scene" aria-label="Rick and Morty inspired portal artwork">
+            <div class="portal-ring"></div>
+            <div class="portal-core">WUBBA</div>
+            <div class="portal-bubble bubble-one"></div>
+            <div class="portal-bubble bubble-two"></div>
+
+            <div class="face-card rick-face">
+              <div class="face-head">
+                <span class="eye left"></span>
+                <span class="eye right"></span>
+                <span class="mouth"></span>
+              </div>
+              <div class="hair"></div>
+            </div>
+
+            <div class="face-card morty-face">
+              <div class="face-head">
+                <span class="eye left"></span>
+                <span class="eye right"></span>
+                <span class="mouth"></span>
+              </div>
+              <div class="hair"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-copy" data-reveal>
+          <p class="eyebrow">About</p>
+          <h2>Designing experiences with a little more chaos and a lot more clarity.</h2>
           <p>
-            I'm a student at <strong>Your School</strong> studying <strong>Your Course</strong>.
-            Write a few sentences here about what you're into, what you're learning,
-            and what kind of work you want to do.
+            I’m a multidisciplinary designer and developer from Singapore, currently studying at Republic Polytechnic while exploring product thinking, front-end craft, and the kind of ideas that feel a little too advanced for a normal universe.
           </p>
           <p>
-            Outside of class, I enjoy <em>hobby one</em>, <em>hobby two</em>, and <em>hobby three</em>.
+            I care about how a product feels in the real world — the rhythm, the clarity, the emotional pull. My work sits somewhere between Rick-level experimentation and Morty-level usability: bold enough to be memorable, structured enough to actually work.
           </p>
+          <div class="about-notes">
+            <span>Republic Poly</span>
+            <span>Citadel ops</span>
+            <span>Product design</span>
+            <span>Portal builds</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ SKILLS ============ -->
-    <section id="skills" class="section container">
-      <h2 class="section-title">Skills</h2>
-      <!-- TODO: List your real skills -->
-      <ul class="skills-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Git &amp; GitHub</li>
-        <li>Teamwork</li>
-      </ul>
-    </section>
+    <section id="journey" class="section container">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Journey</p>
+        <h2>Not a straight line — just a multiverse of experiments.</h2>
+      </div>
 
-    <!-- ============ PROJECTS ============ -->
-    <section id="projects" class="section container">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
+      <div class="journey-layout">
+        <div class="story-panel glass-panel" data-reveal>
+          <div class="story-header">
+            <span class="story-badge">Life timeline</span>
+            <span class="story-note">The weird little chapters</span>
+          </div>
 
-        <!-- TODO: Copy this card for each project you want to show -->
-        <article class="project-card">
-          <h3>Project One</h3>
-          <p>A short description of what this project does and what you learned building it.</p>
-          <ul class="project-tags">
-            <li>HTML</li><li>CSS</li>
-          </ul>
-          <a href="#" class="project-link">View project →</a>
-        </article>
+          <div class="timeline-vertical">
+            <article class="milestone">
+              <span class="milestone-dot"></span>
+              <div class="milestone-content">
+                <span class="milestone-year">2019</span>
+                <h3>Portal spark</h3>
+                <p>I started noticing how design and digital storytelling could completely change how people experience a world.</p>
+              </div>
+            </article>
 
-        <article class="project-card">
-          <h3>Project Two</h3>
-          <p>A short description of what this project does and what you learned building it.</p>
-          <ul class="project-tags">
-            <li>Python</li>
-          </ul>
-          <a href="#" class="project-link">View project →</a>
-        </article>
+            <article class="milestone">
+              <span class="milestone-dot"></span>
+              <div class="milestone-content">
+                <span class="milestone-year">2021</span>
+                <h3>Morty mode activated</h3>
+                <p>I began learning the language of visuals, systems, and interfaces — like a rookie explorer with a weirdly good eye.</p>
+              </div>
+            </article>
 
-        <article class="project-card">
-          <h3>Project Three</h3>
-          <p>A short description of what this project does and what you learned building it.</p>
-          <ul class="project-tags">
-            <li>JavaScript</li>
-          </ul>
-          <a href="#" class="project-link">View project →</a>
-        </article>
+            <article class="milestone">
+              <span class="milestone-dot"></span>
+              <div class="milestone-content">
+                <span class="milestone-year">2023</span>
+                <h3>Reality hacking</h3>
+                <p>I started shipping projects, solving real product problems, and learning how to turn chaos into usable experiences.</p>
+              </div>
+            </article>
 
+            <article class="milestone">
+              <span class="milestone-dot"></span>
+              <div class="milestone-content">
+                <span class="milestone-year">2025</span>
+                <h3>Rick-level focus</h3>
+                <p>Now I build work that feels human, useful, memorable, and just a little bit unhinged in the best way.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="achievement-stack" data-reveal>
+          <article class="achievement-card achievement-highlight glass-panel">
+            <span class="achievement-tag">Big wins</span>
+            <h3>Selected for creative work that mixes design thinking, product energy, and storytelling chaos.</h3>
+            <p>From concept to launch, I like building experiences that are clear enough for real life and weird enough to be memorable.</p>
+          </article>
+
+          <article class="achievement-card glass-panel">
+            <span class="achievement-tag">Achievements</span>
+            <ul>
+              <li>Built multiple digital experiences across personal, research, and product-focused projects</li>
+              <li>Created a visual language rooted in clarity, experimentation, and strong user flow</li>
+              <li>Kept learning across design, product thinking, and front-end execution</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- ============ CONTACT ============ -->
-    <section id="contact" class="section container">
-      <h2 class="section-title">Contact</h2>
-      <p>Want to work together or just say hi? Find me here:</p>
-      <!-- TODO: Put in your real links (delete any you don't use) -->
-      <ul class="contact-links">
-        <li><a href="mailto:you@example.com">Email</a></li>
-        <li><a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
+    <section id="skills" class="section container">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Skills</p>
+        <h2>From portal prototypes to clean user journeys.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card glass-panel" data-reveal>
+          <span class="skill-index">01</span>
+          <h3>Design</h3>
+          <ul>
+            <li>UI/UX</li>
+            <li>Figma</li>
+            <li>Systems</li>
+            <li>Prototyping</li>
+          </ul>
+        </article>
+
+        <article class="skill-card glass-panel" data-reveal>
+          <span class="skill-index">02</span>
+          <h3>Development</h3>
+          <ul>
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Responsive</li>
+          </ul>
+        </article>
+
+        <article class="skill-card glass-panel" data-reveal>
+          <span class="skill-index">03</span>
+          <h3>Strategy</h3>
+          <ul>
+            <li>Research</li>
+            <li>Product</li>
+            <li>Brand</li>
+            <li>Storytelling</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
+    <section id="projects" class="section container projects-section">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Selected work</p>
+        <h2>Featured stories from the portal lab.</h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card project-feature glass-panel" data-reveal>
+          <div class="project-image image-one"></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span>Portal UX</span>
+              <span>2025</span>
+            </div>
+            <h3>Northstar Commerce</h3>
+            <p>Reimagined a storefront experience with a little more drama, a lot more clarity, and a smoother route from scroll to purchase.</p>
+            <ul class="project-tags">
+              <li>UX design</li>
+              <li>Strategy</li>
+              <li>React</li>
+            </ul>
+            <a href="#" class="project-link">View case study →</a>
+          </div>
+        </article>
+
+        <article class="project-card glass-panel" data-reveal>
+          <div class="project-image image-two"></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span>Dimension dashboard</span>
+              <span>2024</span>
+            </div>
+            <h3>Flows Dashboard</h3>
+            <p>Built a cleaner analytics workspace for teams who need their information fast and their interfaces less chaotic.</p>
+            <ul class="project-tags">
+              <li>UI</li>
+              <li>JS</li>
+              <li>Data</li>
+            </ul>
+            <a href="#" class="project-link">View case study →</a>
+          </div>
+        </article>
+
+        <article class="project-card glass-panel" data-reveal>
+          <div class="project-image image-three"></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span>Brand portal</span>
+              <span>2023</span>
+            </div>
+            <h3>Horizon Studio</h3>
+            <p>Created an editorial brand and landing page with more personality, tighter messaging, and a stronger point of view.</p>
+            <ul class="project-tags">
+              <li>Brand</li>
+              <li>Web</li>
+              <li>Story</li>
+            </ul>
+            <a href="#" class="project-link">View case study →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section container">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Experience</p>
+        <h2>Building with teams that actually know how to use a portal.</h2>
+      </div>
+
+      <div class="timeline" aria-label="Professional experience timeline">
+        <article class="timeline-item glass-panel" data-reveal>
+          <div class="timeline-year">2024 — Present</div>
+          <div class="timeline-content">
+            <h3>Lead Product Designer</h3>
+            <p class="timeline-company">Northstar Studio</p>
+            <p>Guiding digital product direction, shaping visual systems, and turning chaotic ideas into elegant, usable experiences.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item glass-panel" data-reveal>
+          <div class="timeline-year">2022 — 2024</div>
+          <div class="timeline-content">
+            <h3>Front-end Developer</h3>
+            <p class="timeline-company">Freelance</p>
+            <p>Built polished landing pages and digital experiences with a focus on performance, speed, and clarity under pressure.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item glass-panel" data-reveal>
+          <div class="timeline-year">2021 — 2022</div>
+          <div class="timeline-content">
+            <h3>UX Design Intern</h3>
+            <p class="timeline-company">Pixel Forge</p>
+            <p>Collaborated across research, design, and engineering to prototype smarter flows and improve product journeys.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="credentials" class="section container">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Education & credentials</p>
+        <h2>Grounded in craft and constantly learning.</h2>
+      </div>
+
+      <div class="credentials-grid">
+        <div class="education-card glass-panel" data-reveal>
+          <h3>Education</h3>
+          <div class="edu-item">
+            <span class="edu-year">2021 — 2024</span>
+            <div>
+              <strong>Diploma in Digital Media</strong>
+              <p>Republic Polytechnic</p>
+            </div>
+          </div>
+          <div class="edu-item">
+            <span class="edu-year">2019 — 2021</span>
+            <div>
+              <strong>International Baccalaureate</strong>
+              <p>Creative & technology pathway</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="certs-grid" data-reveal>
+          <article class="cert-card glass-panel">
+            <span class="cert-badge">UX</span>
+            <h3>Google UX Design</h3>
+            <p>Foundations of UX, research, and prototype thinking.</p>
+          </article>
+
+          <article class="cert-card glass-panel">
+            <span class="cert-badge">Web</span>
+            <h3>Meta Front-End</h3>
+            <p>Responsive design, accessibility, and JavaScript fundamentals.</p>
+          </article>
+
+          <article class="cert-card glass-panel">
+            <span class="cert-badge">Cloud</span>
+            <h3>AWS Cloud</h3>
+            <p>Core cloud concepts through a product and delivery lens.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-overlay"></div>
+      <div class="container contact-wrap" data-reveal>
+        <p class="eyebrow">Let’s connect</p>
+        <h2>Open to bold collaborations, weird ideas, and product work that deserves a portal.</h2>
+        <div class="contact-actions">
+          <a href="mailto:hello@yuen.studio" class="btn btn-primary">hello@yuen.studio</a>
+        </div>
+        <ul class="contact-links" aria-label="Social links">
+          <li><a href="https://github.com/yuen" target="_blank" rel="noreferrer noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/yuen" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
+          <li><a href="https://dribbble.com/yuen" target="_blank" rel="noreferrer noopener">Dribbble</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <p>© <span id="year"></span> Your Name. Built during the Vibe Code Your Portfolio workshop.</p>
+    <p>© <span id="year"></span> Yuen. Crafted with interdimensional intention.</p>
   </footer>
 
   <script src="js/main.js"></script>

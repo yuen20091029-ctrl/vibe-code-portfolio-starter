@@ -1,25 +1,61 @@
-// =========================================================
-// Portfolio scripts
-// =========================================================
-
-// Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Dark mode toggle (remembers your choice)
-const toggle = document.getElementById("theme-toggle");
 const root = document.documentElement;
+const toggle = document.getElementById("theme-toggle");
 
 function setTheme(theme) {
   root.setAttribute("data-theme", theme);
   toggle.textContent = theme === "dark" ? "☀️" : "🌙";
-  try { localStorage.setItem("theme", theme); } catch (e) {}
+
+  try {
+    localStorage.setItem("theme", theme);
+  } catch (error) {
+    // Local storage may be unavailable in some browsing contexts.
+  }
 }
 
-let saved = null;
-try { saved = localStorage.getItem("theme"); } catch (e) {}
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-setTheme(saved || (prefersDark ? "dark" : "light"));
+const savedTheme = (() => {
+  try {
+    return localStorage.getItem("theme");
+  } catch (error) {
+    return null;
+  }
+})();
+
+setTheme(savedTheme || "dark");
 
 toggle.addEventListener("click", () => {
-  setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+  const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  setTheme(nextTheme);
 });
+
+const revealElements = document.querySelectorAll("[data-reveal]");
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+
+revealElements.forEach((element) => revealObserver.observe(element));
+
+const cursor = document.querySelector(".cursor-dot");
+
+if (window.matchMedia("(pointer: fine)").matches && cursor) {
+  document.addEventListener("pointermove", (event) => {
+    cursor.style.left = `${event.clientX}px`;
+    cursor.style.top = `${event.clientY}px`;
+  });
+
+  document.querySelectorAll("a, button, .project-card, .skill-card, .timeline-item, .cert-card").forEach((element) => {
+    element.addEventListener("mouseenter", () => cursor.classList.add("active"));
+    element.addEventListener("mouseleave", () => cursor.classList.remove("active"));
+  });
+} else if (cursor) {
+  cursor.style.display = "none";
+}
